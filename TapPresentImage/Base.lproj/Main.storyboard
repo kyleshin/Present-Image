@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second View Controller-->
+        <scene sceneID="3Op-6O-wjj">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" automaticallyAdjustsScrollViewInsets="NO" id="E9W-E8-Psd" customClass="SecondViewController" customModule="TapPresentImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s5S-Ev-PEO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="KPM-GM-23Z">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oFo-ca-nBA">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="459"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ew1-4g-luL">
+                                        <rect key="frame" x="8" y="8" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="9jf-53-CZN"/>
+                                            <constraint firstAttribute="width" constant="25" id="h4k-z9-PGc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="handleDismiss:" destination="E9W-E8-Psd" eventType="touchUpInside" id="ORN-Ty-SJf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="oFo-ca-nBA" secondAttribute="bottom" id="4AU-mB-BJP"/>
+                                    <constraint firstItem="oFo-ca-nBA" firstAttribute="top" secondItem="KPM-GM-23Z" secondAttribute="top" id="AhN-fc-o00"/>
+                                    <constraint firstItem="oFo-ca-nBA" firstAttribute="leading" secondItem="KPM-GM-23Z" secondAttribute="leading" id="Ftj-YD-PgW"/>
+                                    <constraint firstItem="oFo-ca-nBA" firstAttribute="centerX" secondItem="KPM-GM-23Z" secondAttribute="centerX" id="LYr-pf-5tB"/>
+                                    <constraint firstItem="oFo-ca-nBA" firstAttribute="centerY" secondItem="KPM-GM-23Z" secondAttribute="centerY" id="PsG-9v-Et0"/>
+                                    <constraint firstAttribute="trailing" secondItem="oFo-ca-nBA" secondAttribute="trailing" id="RXw-Ha-X0N"/>
+                                    <constraint firstItem="ew1-4g-luL" firstAttribute="leading" secondItem="KPM-GM-23Z" secondAttribute="leading" constant="8" id="dB5-qN-CEX"/>
+                                    <constraint firstItem="ew1-4g-luL" firstAttribute="top" secondItem="KPM-GM-23Z" secondAttribute="top" constant="8" id="twk-xn-qOo"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KPM-GM-23Z" firstAttribute="top" secondItem="1ew-c3-JA8" secondAttribute="top" id="34b-8q-lBE"/>
+                            <constraint firstItem="1ew-c3-JA8" firstAttribute="bottom" secondItem="KPM-GM-23Z" secondAttribute="bottom" id="RnM-dT-d4k"/>
+                            <constraint firstItem="KPM-GM-23Z" firstAttribute="leading" secondItem="1ew-c3-JA8" secondAttribute="leading" id="WoQ-7F-NCY"/>
+                            <constraint firstItem="1ew-c3-JA8" firstAttribute="trailing" secondItem="KPM-GM-23Z" secondAttribute="trailing" id="lz2-w8-fhQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1ew-c3-JA8"/>
+                    </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="ew1-4g-luL" id="wct-rf-MEw"/>
+                        <outlet property="pictureImage" destination="oFo-ca-nBA" id="9V6-wU-Ec1"/>
+                        <outlet property="scrollView" destination="KPM-GM-23Z" id="kCc-6v-FY6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S0r-2g-FaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.8" y="-647.22638680659679"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="TapPresentImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KOL-lj-TOn">
+                                <rect key="frame" x="0.0" y="32" width="321" height="321"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="350" id="JVP-18-zC6"/>
+                                    <constraint firstAttribute="width" priority="750" constant="350" id="MpY-6P-bjm"/>
+                                    <constraint firstAttribute="width" secondItem="KOL-lj-TOn" secondAttribute="height" multiplier="1:1" id="lY5-wa-pAQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Image To Enlarge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5H-wD-1lG">
+                                <rect key="frame" x="68" y="365" width="184" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="A5H-wD-1lG" firstAttribute="top" secondItem="KOL-lj-TOn" secondAttribute="bottom" constant="12" id="Dtp-C7-iE8"/>
+                            <constraint firstItem="KOL-lj-TOn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="HUX-zT-IYM"/>
+                            <constraint firstItem="A5H-wD-1lG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="br4-if-Bes"/>
+                            <constraint firstItem="A5H-wD-1lG" firstAttribute="centerX" secondItem="KOL-lj-TOn" secondAttribute="centerX" id="fWR-7d-Vxz"/>
+                            <constraint firstItem="KOL-lj-TOn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k2E-9B-wTR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="f7Z-ZJ-Oce"/>
+                    <navigationItem key="navigationItem" id="Tg3-RJ-3Tw"/>
+                    <connections>
+                        <outlet property="mainImageView" destination="KOL-lj-TOn" id="BxW-Yq-7jD"/>
+                        <outlet property="tapImageLabel" destination="A5H-wD-1lG" id="QGf-1U-Gqq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1802" y="117"/>
+        </scene>
+    </scenes>
+</document>
