@@ -7,6 +7,3 @@ The presentation is animated(non-interactive), and the dismissal is animated and
 The iOS techniques presented here are:
 * Getting a resized image to be presented in the imageView.
 * Custom view controller transition animation - interactive and non-interactive.
-
-
-<img src="https://s3-us-west-2.amazonaws.com/kyleshin-info-resources/images/tapImage.gif" width="40%" title="tap gif"/>
